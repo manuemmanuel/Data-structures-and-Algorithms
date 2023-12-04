@@ -37,7 +37,20 @@ void mergeSort(int arr[], int left, int right) {
         int middle = left + (right - left) / 2;
         mergeSort(arr, left, middle);
         mergeSort(arr, middle + 1, right);
-    
+        merge(arr, left, middle, right);
+    }
+}
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the array elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Given array is \n");
+    for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     printf("\n");
     mergeSort(arr, 0, n - 1);
