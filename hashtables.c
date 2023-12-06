@@ -1,24 +1,4 @@
-#include <stdio.h>
-#include<stdlib.h>
-#define TABLE_SIZE 5
-int h[TABLE_SIZE]={0};
-void insert()
-{
 
- int key,index,i,flag=0,hkey;
- printf("Enter a value to insert into hash table: ");
- scanf("%d",&key);
- hkey=key%TABLE_SIZE;
- for(i=0;i<TABLE_SIZE;i++)
-    {
-     index=(hkey+i)%TABLE_SIZE;
-     if(h[index] == 0)
-     {
-        h[index]=key;
-         break;
-     }
-    }
-    if(i == TABLE_SIZE)
      printf("Element cannot be inserted.\n");
 }
 void search()
