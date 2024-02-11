@@ -31,7 +31,7 @@ int merge(int a[],int start,int mid,int end){
         k++;
         i++;
     }
-    else if (j <= mid){
+    else if (j <= end){
         temp[k] = a[j];
         k++;
         j++;
